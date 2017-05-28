@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.Controllers.MainScreenController">
+   <children>
+      <ToggleButton fx:id="showCreditButton" layoutX="14.0" layoutY="455.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Show credits" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <ToggleButton fx:id="showDebitButton" layoutX="195.0" layoutY="455.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Show debits" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="195.0" />
+      <TextField fx:id="transactionMessageField" layoutX="347.0" layoutY="64.0" prefHeight="25.0" prefWidth="455.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="64.0" />
+      <Label fx:id="transactionMessageLabel" layoutX="355.0" layoutY="47.0" text="Transaction message" AnchorPane.rightAnchor="355.0" />
+      <Label fx:id="transactionValueLabel" layoutX="357.0" layoutY="259.0" text="Sum" AnchorPane.rightAnchor="440.0" AnchorPane.topAnchor="259.0" />
+      <TextField fx:id="transactionValueField" layoutX="352.0" layoutY="276.0" prefHeight="25.0" prefWidth="455.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="transactionOwnerLabel" layoutX="356.0" layoutY="101.0" text="Transaction owner" AnchorPane.rightAnchor="367.0" />
+      <TextField fx:id="transactionOwnerField" layoutX="347.0" layoutY="118.0" prefHeight="25.0" prefWidth="455.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="otherMemberOfTransactionLabel" layoutX="356.0" layoutY="155.0" text="The other member of the transaction" AnchorPane.rightAnchor="269.0" />
+      <TextField fx:id="otherMemberOfTransactionField" layoutX="347.0" layoutY="172.0" prefHeight="25.0" prefWidth="455.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="transactionTimeLabel" layoutX="347.0" layoutY="209.0" text="Date" AnchorPane.rightAnchor="440.0" AnchorPane.topAnchor="209.0" />
+      <TextField fx:id="transactionTimeField" layoutX="352.0" layoutY="226.0" prefHeight="25.0" prefWidth="455.0" AnchorPane.rightAnchor="14.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="827.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="refreshButton" layoutX="162.0" layoutY="495.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="↺" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="162.0" />
+      <TableView fx:id="mainTableView" layoutX="14.0" layoutY="31.0" prefHeight="453.0" prefWidth="323.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="484.0" AnchorPane.topAnchor="31.0" />
+   </children>
+</AnchorPane>

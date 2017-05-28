@@ -29,6 +29,8 @@ public class TransactionModel {
     private double value;
     private LocalDateTime transactionTime;
     private String currency;
+    private String message;
+    private String otherAccount;
 
     public TransactionModel()
     {
@@ -71,8 +73,11 @@ public class TransactionModel {
         return transactionTime;
     }
 
-    public void setTransactionTime(LocalDateTime transactionTime) {
-        this.transactionTime = transactionTime;
+    public void setTransactionTime(String transactionTime) {
+        LocalDateTime dateTime = LocalDateTime.of(Integer.parseInt(transactionTime.split("\\-")[0]),
+                                                  Integer.parseInt(transactionTime.split("\\-")[1]),
+                                                  Integer.parseInt(transactionTime.split("\\-")[2]), 0, 0);
+        this.transactionTime = dateTime;
     }
 
     public String getCurrency() {
@@ -81,5 +86,65 @@ public class TransactionModel {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public String getMessage() {
+        if(message == null || message.replaceAll(" ", "").isEmpty())
+            return "No message";
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public TransactionModel withId(int id) {
+        setId(id);
+        return this;
+    }
+
+    public TransactionModel withUserId(int userId) {
+        setUserId(userId);
+        return this;
+    }
+
+    public TransactionModel withIsCredit(boolean isCredit) {
+        setIsCredit(isCredit);
+        return this;
+    }
+
+    public TransactionModel withValue(double value) {
+        setValue(value);
+        return this;
+    }
+
+    public TransactionModel withTransactionTime(String transactionTime) {
+        setTransactionTime(transactionTime);
+        return this;
+    }
+
+    public TransactionModel withCurrency(String currency) {
+        setCurrency(currency);
+        return this;
+    }
+
+    public TransactionModel withMessage(String message) {
+        setMessage(message);
+        return this;
+    }
+
+    public String getOtherAccount()
+    {
+        return otherAccount;
+    }
+
+    public void setOtherAccount(String otherAccount)
+    {
+        this.otherAccount = otherAccount;
+    }
+
+    public TransactionModel withOtherAccount(String otherAccount) {
+        setOtherAccount(otherAccount);
+        return this;
     }
 }
