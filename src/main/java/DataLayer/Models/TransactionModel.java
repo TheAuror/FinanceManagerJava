@@ -16,10 +16,70 @@
  */
 package DataLayer.Models;
 
+import java.time.LocalDateTime;
+
 /**
- *
+ * Represents an exchange of money
  * @author Auror
  */
 public class TransactionModel {
-    
+    private int id;
+    private int userId;
+    private boolean isCredit;
+    private double value;
+    private LocalDateTime transactionTime;
+    private String currency;
+
+    public TransactionModel()
+    {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public boolean isCredit() {
+        return isCredit;
+    }
+
+    public void setIsCredit(boolean isCredit) {
+        this.isCredit = isCredit;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public LocalDateTime getTransactionTime() {
+        return transactionTime;
+    }
+
+    public void setTransactionTime(LocalDateTime transactionTime) {
+        this.transactionTime = transactionTime;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 }

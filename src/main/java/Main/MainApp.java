@@ -19,7 +19,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        SAXBuilder builder = new SAXBuilder();
+/*        SAXBuilder builder = new SAXBuilder();
         File xmlFile = new File("C:\\Users\\Auror\\Desktop\\Számlatörténet\\export (1).xml");
 
         try {
@@ -41,7 +41,7 @@ public class MainApp extends Application {
             System.out.println(io.getMessage());
         } catch (JDOMException jdomex) {
             System.out.println(jdomex.getMessage());
-        }
+        }*/
 
         Parent root = FXMLLoader.load(getClass()
                 .getResource("/fxml/Scene.fxml"));

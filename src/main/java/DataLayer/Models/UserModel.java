@@ -22,7 +22,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- *
+ * Represents a user or a transaction owner
  * @author Auror
  */
 @Entity
